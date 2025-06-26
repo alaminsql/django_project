@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+<title> payment </title>
+
+</head>
+<body>
+    {% if pay %}
+<table>
+    <tr>
+        <th>id</th>
+         <th>pay_id</th>
+         <th>pay_option</th>
+        <th>min_pay</th>
+    </tr>
+    {% for py in pay %}
+    <tr>
+        <td>{{py.id}} </td>
+        <td>{{py.pay_id}} </td>
+        <td>{{py.pay_option}} </td>
+        <td>{{py.min_pay}} </td>
+       
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1> no avialble in data </h1>
+{% endif %}
+</body>
+</html>
