@@ -1,0 +1,15 @@
+<html>
+<head>
+<title> django from </title>
+
+</head>
+<body>
+    <form action="" method='POST' novalidate>
+     {% csrf_token %}
+     {{form.as_p}}
+     <input type='submit' value='submit'>  
+     
+    </form>
+      
+</body>
+</html>
