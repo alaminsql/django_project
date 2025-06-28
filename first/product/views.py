@@ -13,7 +13,19 @@ def details(request):
           if frm.is_valid():
                print('valid form')
                print('POST Statment')
-               print(frm.cleaned_data)
+               print('Mobile:',frm.cleaned_data['mobile'])
+               print('Re_Mobile:',frm.cleaned_data['re_mobile'])
+               print('laptop:',frm.cleaned_data['laptop'])
+               print('email:',frm.cleaned_data['email'])
+               print('about:',frm.cleaned_data['about'])
+               print('textarea:',frm.cleaned_data['textarea'])
+               print('checkbox:',frm.cleaned_data['checkbox'])
+               print('ram:',frm.cleaned_data['ram'])
+               print('ssd:',frm.cleaned_data['ssd'])
+               print('youtube_chanel:',frm.cleaned_data['youtube_chanel'])
+               
+              
+                  
                return HttpResponseRedirect('/pdc/successfully')
                
           
