@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from product.froms import RecentProduct
+from .models import laptop
 
 # Create your views here.
 def pd(request):
@@ -11,18 +12,19 @@ def details(request):
      if request.method=='POST':
           frm= RecentProduct(request.POST)
           if frm.is_valid():
-               print('valid form')
-               print('POST Statment')
-               print('Mobile:',frm.cleaned_data['mobile'])
-               print('Re_Mobile:',frm.cleaned_data['re_mobile'])
-               print('laptop:',frm.cleaned_data['laptop'])
-               print('email:',frm.cleaned_data['email'])
-               print('about:',frm.cleaned_data['about'])
-               print('textarea:',frm.cleaned_data['textarea'])
-               print('checkbox:',frm.cleaned_data['checkbox'])
-               print('ram:',frm.cleaned_data['ram'])
-               print('ssd:',frm.cleaned_data['ssd'])
-               print('youtube_chanel:',frm.cleaned_data['youtube_chanel'])
+               mo=frm.cleaned_data['mobile']
+               rmo=frm.cleaned_data['re_mobile']
+               lb=frm.cleaned_data['laptop']
+               em=frm.cleaned_data['email']
+               ab=frm.cleaned_data['about']
+               tx=frm.cleaned_data['textarea']
+               ch=frm.cleaned_data['checkbox']
+               ra=frm.cleaned_data['ram']
+               ss=frm.cleaned_data['ssd']
+               you=frm.cleaned_data['youtube_chanel']
+               buy=laptop(mobile=mo,re_mobile=rmo,laptop=lb,email=em,about=ab,textarea=tx,checkbox=ch,ram=ra,ssd=ss,youtube_chanel=you)
+               buy.save()
+               
                
               
                   

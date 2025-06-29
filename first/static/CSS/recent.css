@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(44, 36, 43);
+}
+form{
+    border: 2px solid blue;
+    padding: 10px;
+}
+label{
+    color: antiquewhite;
+    font-size: 20px ;
+    font-weight: 900;
+}
+input {
+    width: 200px;
+    background-color: black;
+    color: white;
+}
+#checkbox{
+    width: 20px;
+    height: 20px;
+}
+#ram{
+    width: 100px;
+}
+#ssd{
+    width: 100px;
+}
+#youtube_chanel{
+    width: 20px;
+    height: 20px;
+}
+.errorlist{
+    color: rgb(97, 8, 8);
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+textarea{
+    background-color: black;
+    color: white;
+}
