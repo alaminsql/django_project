@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,HttpResponse
 from product.froms import RecentProduct
 from .models import laptop
 
@@ -38,3 +38,7 @@ def details(request):
  
 
      return render(request,'product/recent.html',{'form':frm})
+
+def midd(request):
+     print('1st middleware')
+     return HttpResponse("this is first middleware")

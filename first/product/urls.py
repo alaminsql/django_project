@@ -5,5 +5,6 @@ urlpatterns = [
     path('product/',views.pd,name='Product'),
     path('recents/',views.details),
     path('successfully/',views.send),
+    path('middleware/',views.midd),
 
 ]

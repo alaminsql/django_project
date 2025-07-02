@@ -1,0 +1,23 @@
+<html>
+<head>
+   
+<title> ChangePassword </title>
+
+</head>
+<body>
+    <form action='', method='POST' novalidate>
+         {% csrf_token %}
+         {% if form.non_field_errors %}
+         {% for error in form.non_field_errors %}
+         <p>{{error}}</p>
+         {% endfor %}
+         {% endif %}
+        {% for frm in form %}
+        {{frm.label_tag}} {{frm}} {{frm.errors|striptags}} <br> <br>
+        {% endfor %}
+    
+        <input type='submit' value='save'>
+        <a href="{% url 'logout'%}">logout</a>
+    </form>
+</body>
+</html>
